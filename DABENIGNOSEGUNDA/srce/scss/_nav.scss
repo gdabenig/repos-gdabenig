@@ -1,0 +1,18 @@
+nav{background-color: rgba(177, 188 ,270, 0.5);}
+nav ol{list-style: none;}
+header{
+	height: 70vh;
+	width: 750px;
+	background-image: url(../../imagenes/escuelita.jpg);
+	animation-name: animateHeader;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-delay: 3s;
+	animation-timing-function: ease;
+      }
+
+@keyframes animateHeader{
+	0%{background-image: url(../../imagenes/pileta2.jpg)}
+	70%{background-image: url(../../imagenes/pileta.jpg)}
+
+		}
