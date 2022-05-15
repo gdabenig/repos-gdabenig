@@ -1,0 +1,167 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+ $fontMain:'Roboto', sans-serif;
+ *{font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;}
+html{font-size: 62.5%;}
+h1,h2,h3 {
+color: 	blue; font-family: fantasy; 
+          }
+.novedades_titulo--xxl{font-size: 4rem}
+.novedades_titulo--xl{font-size:  3rem}
+.novedades_titulo--md{font-size:  2rem} 
+
+.encabezado_img--fluid{  width: 100%;}
+.encabezado_box--white{ text-align: center;
+	                    background-color: white; 
+	                    font-size: 10px
+	                  }
+.pie{padding: 20px; 
+	display: flex; 
+	flex-direction: column;
+	justify-content: center; 
+    }
+    .pie2{ padding:1px; 
+	    width: 30px;
+	    margin: 10px;
+	    display: flex;
+	    
+        }  
+        .pie_icon--sm{background-color: brown
+}
+.pie_titulo--md{font-size: 30px; background-color: pink}
+
+.novedades_titulo--xxl{font-size: 4rem}
+.novedades_titulo--xl{font-size:  3rem}
+.novedades_titulo--md{font-size:  2rem}
+
+.botonera{ background-color: violet ;
+          position: sticky; 
+          top: 0;
+          padding:  10px 30px; 
+          display: flex; 
+          justify-content: space-between;
+          align-items: center;
+           }
+           .botonera ol { display: flex; 
+	             }
+	  .botonera ol li a{font-size: 1.8rem 
+	                   }
+        .botonera ol li a:hover{ color: black;
+                                font-weight: 600;
+                                 }
+         .botoneragr img{ width: 50%;
+         	            padding-top: 10px
+         	            margin-right 80px 
+                               }
+
+
+                  .botonera img{ width: 25%;
+         	            padding-top: 10px
+                               }
+ .textRed{ color: red; } 
+.bgDark{background-color: rgba(195, 190 , 190, 0);}
+.bgLight{background-color: rgba(238,188,247,0.5);}
+.bgDark{background-color: rgba(195, 190 , 190, 0);}.textCenter{ text-align: center; }
+.textRight{ text-align: right; }
+.textLeft{ text-align: left; }
+.colores { background-color: rgba(177, 188 ,270, 0.5);}
+ @media (min-width: 768px) {#contenedor-grid{grid-template-columns: repeat( 4, 1fr); grid-template-rows: auto;
+   } }
+
+@media (min-width: 1024px) {#contenedor-grid{grid-template-columns: 20vw 70vw 10vw ; grid-template-rows: auto;
+   } }
+    @media (min-width: 768px) {#contenedor-index{grid-template-columns: repeat( 4, 1fr); grid-template-rows: auto;
+   } }
+
+@media (min-width: 1024px) {#contenedor-index{grid-template-columns: 20vw 70vw 10vw ; grid-template-rows: auto;
+   } }
+
+   // variables 
+// $width:100%;
+// $height:30vh;
+
+// $lang:fr;
+
+
+// extends
+
+.btn-more{ width: 100px;
+           height: 30px;
+           background-color:blue;
+           color:white;
+           border:none; 
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           &:hover{ color: darkviolet ;
+                    cursor: pointer;  }
+           }
+.btn-rounded{ @extend .btn-more;
+              border-radius: 15px;
+  
+ }
+
+//mixins
+@mixin texto($font-size,$line-height,$color)
+            { font-size: $font-size; line-height: $line-height; color: $color; 
+            padding: 4px 15px
+
+
+               } 
+
+h2{@include texto(2em,1.5em,deepink)}
+p{@include texto(1.2em,1.4em,grey) }
+// .box{@include flex(center,flex-end);}
+@mixin flex($justify,$align){ display: flex; justify-content: $justify; align-items: $align;}
+// @mixin shadow(){box-shadow: 10px 10px 5px 0px blue ;}
+// .box2{@include shadow()}
+// map
+$paleta:('uno' :green, 'dos' : violet , 'tres' :red , 'cuatro': pink , 'cinco': blue , 'six' : yellow);
+.bg-green{background-color: map-get($map:$paleta, $key:'uno');}
+.bg-violet{background-color: map-get($map:$paleta, $key:'dos');}
+.bg-pink{background-color: map-get($map:$paleta, $key:'cuatro');}
+
+
+
+// math
+// .box{
+//  width: ($width - 2%) / 4;
+//  height: $height - 2vh;
+//  background-color: white;
+// }
+
+// condicionales 
+// .icon-lang{
+//  width: 50px;
+//  height: 50px;
+//  background-size:contain;
+//  background-position:center;
+//  @if $lang==es{background-image: url(../img/icono-es.jpg)}
+//  @else if $lang==en{background: url(../img/icono-en.jpg)}
+//  @else if $lang==fr{background: url(../img/icono-fr.jpg)}
+//  @else{background: url(../img/icono-any.jpg)};
+// }
+
+// bucles
+// @for $i from 1 through 6{
+//  .text-#{$i}{
+//    font-size: .25em *$i;
+//  }
+// }
+
+// bucle evolucionado
+// @each $icono in facebook, twitter, instagram{
+//  .#{$icono}-icon{
+//    background-image:url(../img/#{$icono}.svg);
+//    width: 30px;
+//    height: 30px;
+//    background-size:100%;
+//    list-style: none;
+//  }
+// }
+
+
+
+
+
